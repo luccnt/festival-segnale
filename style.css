@@ -220,3 +220,38 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.galleria-sedi {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.swiper-slide figure {
+  margin: 0;
+  width: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.swiper-slide figcaption {
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--colore-testo);
+  background-color: var(--colore-sfondo);
+}

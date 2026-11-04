@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Info e Luoghi — Segnale</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Segnale<span>Festival di design</span></a>
+      <nav aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="programma.html">Programma</a>
+        <a href="info.html" aria-current="page">Info e Luoghi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto" class="container">
+    <section class="intro" aria-labelledby="titolo-info">
+      <h1 id="titolo-info">Info e luoghi</h1>
+    </section>
+
+    <section class="galleria-sedi">
+      <h2>Le nostre sedi</h2>
+      
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slide 1: Sede Centrale -->
+          <div class="swiper-slide">
+            <figure>
+              <img src="assets/luoghi/sede-centrale.jpg" alt="Fotografia della facciata della Sede Centrale del Politecnico di Torino in Corso Duca degli Abruzzi">
+              <figcaption>Sede Centrale</figcaption>
+            </figure>
+          </div>
+          
+          <!-- Slide 2: Castello del Valentino -->
+          <div class="swiper-slide">
+            <figure>
+              <img src="assets/luoghi/politecnico-valentino.jpg" alt="Fotografia del cortile e della facciata storica del Castello del Valentino, sede di Architettura del Politecnico">
+              <figcaption>Sede Castello del Valentino</figcaption>
+            </figure>
+          </div>
+          
+
+          <div class="swiper-slide">
+            <figure>
+              <img src="assets/luoghi/mirafiori.jpg" alt="Fotografia della struttura della sede di Mirafiori">
+              <figcaption>Sede Mirafiori</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Pulsanti di navigazione -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Segnale · Progetto didattico · Festival immaginario</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
