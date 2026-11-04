@@ -3,12 +3,12 @@
 
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
 :root {
-  --colore-primario: #245c49;
-  --colore-primario-scuro: #173f32;
+  --colore-primario: #2364a1;
+  --colore-primario-scuro: #0f2942;
   --colore-sfondo: #f5f2e9;
   --colore-testo: #202923;
-  --font-testo: Arial, Helvetica, sans-serif;
-  --font-titoli: Georgia, "Times New Roman", serif;
+  --font-testo: Helvetica, Helvetica, sans-serif;
+  --font-titoli: Helvetica Bold, "Helvetica", sans-serif;
 }
 
 * {
@@ -45,7 +45,7 @@ a:focus-visible {
 
 .site-header {
   padding: 1.25rem 0;
-  border-bottom: 4px solid #d8d2c5;
+  border-bottom: 4px solid var(--colore-primario);
 }
 
 .brand {
@@ -156,7 +156,11 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-/* Qui inseriremo la regola .event-grid durante la demo. */
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
 
 .event-card {
   margin-bottom: 1.5rem;
@@ -205,4 +209,14 @@ h3 {
   top: 1rem;
 }
 
-/* Qui aggiungeremo la media query durante la demo. */
+@media (min-width: 600px) {
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
