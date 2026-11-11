@@ -65,13 +65,17 @@ a:focus-visible {
 }
 
 nav {
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Cambia in 'center' se vuoi i link centrati */
+  gap: 12px;
 }
 
 nav a {
   display: inline-block;
-  margin-right: 1rem;
-  padding: 0.25rem 0;
+  text-decoration: none;
+  padding: 4px 0;
+  margin: 0;
 }
 
 nav a[aria-current="page"] {
@@ -210,8 +214,11 @@ h3 {
 }
 
 @media (min-width: 600px) {
-  .event-grid {
-    grid-template-columns: repeat(2, 1fr);
+  nav {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
   }
 }
 
