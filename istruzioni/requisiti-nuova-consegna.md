@@ -1,82 +1,58 @@
-# Segnale — Nuova pagina Info e luoghi
+# Segnale — Moodboard, carattere web, menu responsive e intestazione sticky
 
-Completa il tuo sito Segnale aggiungendo una pagina **Info e luoghi**, con galleria fotografica, mappa e indirizzi.
+Continua a sviluppare il tuo sito Segnale partendo dalla versione con Home, Programma e Info e luoghi. Mantieni contenuti e funzioni delle consegne precedenti e aggiorna la stessa repository e GitHub Pages.
 
-## Punto di partenza
+## 1. Moodboard
 
-Continua dal tuo sito Segnale già completato. Se devi recuperare, usa la versione completa della consegna precedente fornita dal docente. Conserva una versione funzionante prima di iniziare.
+Prepara un PDF con **3–4 elementi di riferimento** per l’identità visiva del festival. Non devono essere necessariamente immagini: puoi includere una palette di colori, un campione tipografico, parole chiave sull’atmosfera, un manifesto, una fotografia o un esempio di impaginazione.
 
-## Pagina e navigazione
+- Per ogni elemento scrivi **una riga di commento**: quale aspetto ti interessa e che cosa suggerisce per il tuo sito.
+- Indica **tre scelte visive riconoscibili nel sito**, per esempio colori, caratteri e spaziature, collegandole ai riferimenti raccolti. Puoi mantenere scelte già fatte se le motivi.
+- Indica il nome del carattere web scelto e il servizio da cui proviene.
+- Salva il documento nella repository come `progettazione/moodboard.pdf`.
 
-- Aggiungi `info.html`, con un titolo di pagina appropriato e una sola intestazione principale `h1`.
-- Aggiungi la voce Info e luoghi nel menu di Home, Programma e nuova pagina.
-- Mantieni stile e personalizzazioni del tuo sito, usando il CSS condiviso. La nuova pagina deve funzionare alle larghezze di 375, 768 e 1280 px, senza scorrimento orizzontale.
-- Mantieni i sei eventi e i collegamenti precedenti.
+Riferimento: **lezione 5, slide 47–48**.
 
-## Galleria
+## 2. Carattere web
 
-- Integra Swiper 14.4.0 da CDN, con CSS e JavaScript della stessa versione. La versione usata nell’esempio docente è 14.4.0.
-- Usa le tre fotografie nella cartella `assets/luoghi/`, una per sede, accompagnate da nome e didascalia.
-- Mostra una fotografia alla volta e consenti di raggiungerle tutte con comandi precedente/successivo.
-- Non attivare l’avanzamento automatico.
-- Non è richiesto copiare esattamente l’aspetto o i cambiamenti dei pulsanti dell’esempio docente sotto i 320 px.
+Integra **almeno un carattere web** coerente con la moodboard, per i titoli oppure per il testo. Puoi usare, per esempio, Google Fonts.
 
-## Mappa e indirizzi
+- Copia dal servizio il collegamento necessario a caricare il carattere e inseriscilo nell’head delle tre pagine in cui viene utilizzato.
+- Applica il carattere dal CSS condiviso, aggiornando `--font-titoli` o `--font-testo` già presenti nel sito.
+- Mantieni una famiglia di riserva appropriata nella dichiarazione, per esempio `serif` oppure `sans-serif`.
+- Usa la scelta in modo coerente nelle tre pagine e controlla che il testo rimanga leggibile.
 
-- Incorpora la mappa uMap condivisa, partendo dall’iframe fornito: non occorre creare una mappa o un account.
-- Adatta la larghezza al contenitore, mantieni il titolo descrittivo dell’iframe e il collegamento alla vista a schermo intero.
-- Riporta anche fuori dalla mappa i nomi e gli indirizzi delle tre sedi e un collegamento alle indicazioni per ciascuna (puoi usare Google Maps).
+Riferimenti: **lezione 4, slide 24–25**; [Google Fonts](https://fonts.google.com/) e [guida ufficiale: collegamento HTML e uso nel CSS](https://developers.google.com/fonts/docs/getting_started).
 
-  - Sede centrale, Corso Duca degli Abruzzi 24;
-  - Politecnico al Valentino, Viale Mattioli 39;
-  - sede di Mirafiori, Corso Luigi Settembrini 178. Tutte a Torino.
+Il collegamento HTML carica il carattere; il CSS stabilisce dove usarlo. Scrivere soltanto il nome nel CSS non scarica un carattere che non è presente sul computer del visitatore.
 
-## Accessibilità e verifiche
+## 3. Menu responsive
 
-- Titoli ordinati, testi alternativi appropriati per le fotografie e contrasto leggibile fra testo e sfondo. Per il testo normale usa il riferimento di almeno 4,5:1 richiamato a lezione.
-- Verifica il focus e l’uso da tastiera dei comandi della galleria.
-- Apri il sito a 375, 768 e 1280 px; controlla menu, immagini, didascalie, comandi e mappa.
+Nelle tre pagine, fai cambiare la disposizione dei collegamenti Home, Programma e Info e luoghi:
 
-## AI e pubblicazione
+- **Sotto 600 px:** collegamenti disposti uno sotto l’altro, in colonna.
+- **Da 600 px in su:** collegamenti disposti in riga.
 
-Puoi usare un chatbot o lavorare direttamente sul codice. In entrambi i casi verifica il risultato. Conserva una breve traccia delle richieste e dei controlli: non sono richiesti log completi o abbonamenti AI.
+Mantieni tutti i collegamenti visibili, funzionanti e leggibili, senza sovrapposizioni o scorrimento orizzontale. Adatta spazi e allineamento allo stile del tuo sito.
 
-Aggiorna la stessa repository e GitHub Pages con il percorso già usato, poi controlla la versione pubblica. Non sono richiesti Node.js, npm, compilazione o un numero fisso di commit.
+Il risultato richiesto si ottiene con HTML e CSS.
 
-## Materiali e riferimenti
+## 4. Intestazione sticky
 
-Le fotografie sono già nello ZIP:
+Nelle tre pagine, rendi l’intestazione con il menu **sticky**: durante lo scorrimento deve fermarsi in alto e rimanere disponibile.
 
-| File | Sede e contenuto della didascalia |
-| --- | --- |
-| `assets/luoghi/sede-centrale.jpg` | Sede centrale — Corso Duca degli Abruzzi 24 — Officina Nord nel festival immaginario. |
-| `assets/luoghi/politecnico-valentino.jpg` | Politecnico al Valentino — Viale Mattioli 39 — Spazio Forma nel festival immaginario. |
-| `assets/luoghi/mirafiori.jpg` | Sede di Mirafiori — Corso Luigi Settembrini 178 — Cortile Comune nel festival immaginario. |
+- Usa `position: sticky` con `top: 0`, adattando lo stile della tua intestazione.
+- Mantieni uno sfondo che renda leggibili nome del festival e collegamenti anche mentre scorrono gli altri contenuti.
+- Controlla che il menu sia utilizzabile e che galleria e mappa non coprano l’intestazione durante lo scorrimento.
+- Sul telefono verifica che l’intestazione con il menu in colonna lasci spazio sufficiente per leggere il contenuto.
 
-Scrivi testi alternativi appropriati per le fotografie. Puoi rielaborare le didascalie mantenendo corrette le informazioni.
+## 5. Verifica e pubblicazione
 
-- [Swiper: esempio minimo di integrazione](https://swiperjs.com/get-started). Segui i passaggi relativi a CDN, struttura HTML e inizializzazione; adatta l’esempio al tuo sito.
-- CSS della versione usata: `https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.css`.
-- JavaScript della stessa versione: `https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js`.
+- Controlla Home, Programma e Info e luoghi a **375, 768 e 1280 px**.
+- Verifica che il menu cambi disposizione e che i collegamenti funzionino.
+- Scorri le tre pagine e controlla che l’intestazione sticky rimanga leggibile e utilizzabile.
+- Controlla che il carattere web venga caricato anche sul sito pubblico. Se hai dubbi, verifica le richieste nel pannello Network, mostrato nella **lezione 4, slide 39**.
+- Verifica che galleria, mappa, immagini e contenuti precedenti continuino a funzionare.
+- Inserisci `progettazione/moodboard.pdf` nella stessa repository e pubblica le modifiche con il percorso già utilizzato.
 
-### Codice della mappa da incorporare
-
-Inserisci questo iframe nella sezione **Come arrivare** di `info.html`. Conserva l’indirizzo completo e il titolo descrittivo; adatta le dimensioni nel CSS condiviso.
-
-```html
-<iframe id="mappa-sedi"
-  title="Mappa delle tre sedi di riferimento per il festival Segnale a Torino"
-  src="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665?scaleControl=false&amp;miniMapControl=false&amp;scrollWheelZoom=false&amp;zoomControl=true&amp;editMode=disabled&amp;moreControl=true&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=none&amp;captionBar=false&amp;captionMenus=true#12/45.0465/7.6528"></iframe>
-```
-
-Aggiungi sotto la mappa anche il collegamento alla vista a schermo intero:
-
-```html
-<a href="https://umap.openstreetmap.fr/it/map/segnale-sedi-del-festival-immaginario_1479665?scaleControl=false&amp;miniMapControl=false&amp;scrollWheelZoom=true&amp;zoomControl=true&amp;editMode=disabled&amp;moreControl=true&amp;searchControl=null&amp;tilelayersControl=null&amp;embedControl=null&amp;datalayersControl=true&amp;onLoadPanel=none&amp;captionBar=false&amp;captionMenus=true#12/45.0465/7.6528">Visualizza la mappa a schermo intero</a>
-```
-
-### Fonti delle fotografie fornite
-
-- Sede centrale: Neq00, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Politecnico_di_Torino,_sede_di_corso_Duca_degli_Abruzzi,_Torino.jpg).
-- Valentino: Simo.Albo80, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Il_cortile_geometrico_del_Valentino.jpg).
-- Mirafiori: [ICIS](https://www.icis.it/wp-content/uploads/2024/10/L2300-CENTRO-DESIGN-anteprima.jpg).
+Puoi lavorare direttamente sul codice o usare un chatbot. Parti dai riferimenti nelle slide, fornisci i file aggiornati quando servono e verifica le modifiche nel browser e sul sito pubblico.
