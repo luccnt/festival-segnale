@@ -46,6 +46,10 @@ a:focus-visible {
 .site-header {
   padding: 1.25rem 0;
   border-bottom: 4px solid var(--colore-primario);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--colore-sfondo);
 }
 
 .brand {
@@ -67,14 +71,14 @@ a:focus-visible {
 nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Cambia in 'center' se vuoi i link centrati */
-  gap: 12px;
+  align-items: flex-start; 
+  gap: 4px;
 }
 
 nav a {
   display: inline-block;
   text-decoration: none;
-  padding: 4px 0;
+  padding: 2px 0;
   margin: 0;
 }
 
@@ -214,6 +218,10 @@ h3 {
 }
 
 @media (min-width: 600px) {
+  header {
+    padding: 16px 24px;
+  }
+  
   nav {
     flex-direction: row;
     align-items: center;
