@@ -2,13 +2,17 @@
    Lavoreremo su collegamenti, CSS condiviso e disposizione delle schede. */
 
 /* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:wght@300&display=swap');
+
 :root {
-  --colore-primario: #2364a1;
-  --colore-primario-scuro: #0f2942;
-  --colore-sfondo: #f5f2e9;
-  --colore-testo: #202923;
-  --font-testo: Helvetica, Helvetica, sans-serif;
-  --font-titoli: Helvetica Bold, "Helvetica", sans-serif;
+  --colore-primario: #0000FF;
+  --colore-primario-scuro: #0000CC;
+  --colore-sfondo: #d1d1d1;
+  --colore-testo: #000000;
+  --colore-contrasto-1: #02FF63;
+  --colore-contrasto-2: #EF4D76;
+  --font-testo: 'Inter', sans-serif;
+  --font-titoli: 'Boldonse', sans-serif;
 }
 
 * {
@@ -22,6 +26,7 @@ body {
   font-family: var(--font-testo);
   font-size: 1rem;
   line-height: 1.6;
+  letter-spacing: -0.08em;
 }
 
 a {
@@ -45,11 +50,12 @@ a:focus-visible {
 
 .site-header {
   padding: 1.25rem 0;
-  border-bottom: 4px solid var(--colore-primario);
+  border-bottom: 8px solid var(--colore-contrasto-1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--colore-sfondo);
+  background-color: var(--colore-primario);
+  
 }
 
 .brand {
@@ -77,13 +83,18 @@ nav {
 
 nav a {
   display: inline-block;
+  color: var(--colore-testo);
   text-decoration: none;
   padding: 2px 0;
   margin: 0;
 }
 
 nav a[aria-current="page"] {
-  font-weight: bold;
+ font-weight: bold;
+ background-color: var(--colore-contrasto-1);
+  border: 2px solid var(--colore-contrasto-1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .intro {
@@ -101,6 +112,8 @@ h1,
 h2,
 h3 {
   font-family: var(--font-titoli);
+  color: var(--colore-primario);
+  letter-spacing: -0.05em;
   line-height: 1.2;
 }
 
